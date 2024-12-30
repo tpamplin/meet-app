@@ -25,4 +25,5 @@ dist-ssr
 
 
 auth-server/config.json
+.prettierignore
 
