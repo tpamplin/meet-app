@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div className='app'>
       <CitySearch allLocations={allLocations}/>
-      <EventList />
+      <EventList events={events}/>
     </div>
   )
 }
