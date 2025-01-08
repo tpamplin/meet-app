@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-
-
 const CitySearch = ({ allLocations }) => {
     //Set States
     const [showSuggestions, setShowSuggestions] = useState(false);
