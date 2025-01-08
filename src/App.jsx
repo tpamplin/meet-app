@@ -7,9 +7,11 @@ import { extractLocations, getEvents } from "./api";
 const App = () => {
 
   const [allLocations, setAllLocations] = useState([])
+  const [allEvents, setAllEvents] = useState([])
 
   const fetchData = async () => {
-    const allEvents = await getEvents();
+    const events = await getEvents();
+    setAllEvents(events)
     setAllLocations(extractLocations(allEvents));
   }
 
@@ -18,7 +20,7 @@ const App = () => {
   return (
     <div className='app'>
       <CitySearch allLocations={allLocations}/>
-      <EventList events={events}/>
+      <EventList events={allEvents}/>
     </div>
   )
 }
