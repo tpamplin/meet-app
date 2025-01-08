@@ -7,8 +7,8 @@ const NumberOfEvents = ({currentNOE, setCurrentNOE}) => {
 
     const handleInputChange = (event) => {
         const value = event.target.value;
-        setNumber(value)
         setCurrentNOE(value);
+        setNumber(value)
         }
 
     return (
