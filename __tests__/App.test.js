@@ -46,7 +46,7 @@ describe("<App /> integrations", () => {
 
         expect(allRenderedEventItems.length).toBe(berlinEvents.length);
 
-        allRenderedEventItemsl.forEach((event) => {
+        allRenderedEventItems.forEach((event) => {
             expect(event.textContent).toContain("Berlin, Germany");
         });
     });

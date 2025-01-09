@@ -32,7 +32,7 @@ describe("<CitySearch /> component", () => {
         expect(suggestionList).toHaveClass("suggestions");
     });
 
-    test("updates list of suggestions correctly when user types in cityt textbox", async () => {
+    test("updates list of suggestions correctly when user types in city textbox", async () => {
         const user = userEvent.setup();
         const allEvents = await getEvents();
         const allLocations = extractLocations(allEvents);
@@ -58,7 +58,7 @@ describe("<CitySearch /> component", () => {
         const user = userEvent.setup();
         const allEvents = await getEvents();
         const allLocations = extractLocations(allEvents);
-        CitySearchComponent.rerender(<CitySearch allLocations={allLocations} />);
+        CitySearchComponent.rerender(<CitySearch allLocations={allLocations} setCurrentCity={() => {}} />);
 
         const cityTextBox = CitySearchComponent.queryByRole("textbox");
         await user.type(cityTextBox, "Berlin");
