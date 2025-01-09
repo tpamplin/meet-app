@@ -60,7 +60,9 @@ describe("<App /> integrations", () => {
     test("Renders the correct number of events when the user enters a new number", async () => {
         const NumberOfEventsDOM = AppDOM.querySelector("#number-of-events");
         const NumberOfEventsInput = within(NumberOfEventsDOM).queryByRole("textbox");
+
         await user.type(NumberOfEventsInput, "{backspace}{backspace}15");
+
         const allRenderedEventItems = within(EventListDOM).queryAllByRole("listitem");
 
         expect(allRenderedEventItems.length).toBe(15);

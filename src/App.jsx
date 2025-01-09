@@ -25,7 +25,7 @@ const App = () => {
   // Initialize our state.
   useEffect(() => {
     fetchData();
-  }, [currentCity]);
+  }, [currentCity, currentNOE]);
   
 
   return (
