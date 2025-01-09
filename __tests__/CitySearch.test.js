@@ -9,7 +9,7 @@ import { keyboard } from "@testing-library/user-event/dist/cjs/keyboard/index.js
 describe("<CitySearch /> component", () => {
     let CitySearchComponent;
     beforeEach(() => {
-        CitySearchComponent = render(<CitySearch />);
+        CitySearchComponent = render(<CitySearch allLocations={[]} />);
     });
 
     test("renders text input", () => {

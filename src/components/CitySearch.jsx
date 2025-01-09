@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const CitySearch = ({ allLocations }) => {
+const CitySearch = ({ allLocations, setCurrentCity }) => {
     //Set States
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [suggestions, setSuggestions] = useState([]);
