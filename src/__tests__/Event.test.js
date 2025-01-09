@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { getEvents } from "../src/api";
-import mockData from "../src/mock-data";
-import Event from "../src/components/Event";
+import { getEvents } from "../api";
+import mockData from "../mock-data";
+import Event from "../components/Event";
 
 describe("<Event /> component", () => {
     let EventComponent;

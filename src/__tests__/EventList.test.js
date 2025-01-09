@@ -1,8 +1,8 @@
 import React from "react";
 import { render, within, waitFor } from "@testing-library/react";
-import { getEvents } from "../src/api";
-import EventList from "../src/components/EventList";
-import App from "../src/App";
+import { getEvents } from "../api";
+import EventList from "../components/EventList";
+import App from "../App";
 
 describe("<EventList  /> component", () => {
     let EventListComponent;

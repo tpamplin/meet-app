@@ -1,9 +1,9 @@
 import React from "react";
 import { render, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import CitySearch from "../src/components/CitySearch";
-import App from "../src/App";
-import { extractLocations, getEvents } from "./../src/api";
+import CitySearch from "../components/CitySearch";
+import App from "../App";
+import { extractLocations, getEvents } from "../api";
 import { keyboard } from "@testing-library/user-event/dist/cjs/keyboard/index.js";
 
 describe("<CitySearch /> component", () => {

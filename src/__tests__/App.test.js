@@ -1,9 +1,9 @@
 import React from "react";
-import App from "./../src/App";
+import App from "../App";
 
 import { render, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { getEvents } from "../src/api";
+import { getEvents } from "../api";
 
 describe("<App /> component", () => {
     let AppDOM;
