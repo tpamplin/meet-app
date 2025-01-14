@@ -6,7 +6,9 @@ import { render } from "@testing-library/react";
 describe("<NumberOfEvents /> component", () => {
     let NumberOfEventsComponent;
     beforeEach(() => {
-        NumberOfEventsComponent = render(<NumberOfEvents currentNOE={32} setCurrentNOE={() => {}} />);
+        NumberOfEventsComponent = render(
+            <NumberOfEvents currentNOE={32} setCurrentNOE={() => {}} setErrorAlert={() => {}} />
+        );
     });
 
     test("NumberOfEvents component contains a textbox", () => {
