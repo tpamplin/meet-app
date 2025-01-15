@@ -29,11 +29,13 @@ const App = () => {
 
   // Initialize our state.
   useEffect(() => {
+    let warningText;
     if(navigator.online) {
-      setWarningAlert("")
+      warningText = "";
     } else {
-      setWarningAlert("You are offline, showing events from local storage.")
+      warningText = "You are offline, loading events from local storage."
     }
+    setWarningAlert(warningText)
     fetchData();
   }, [currentCity, currentNOE]);
   
