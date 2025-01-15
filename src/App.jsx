@@ -30,7 +30,7 @@ const App = () => {
   // Initialize our state.
   useEffect(() => {
     let warningText;
-    if(navigator.online) {
+    if(navigator.onLine) {
       warningText = "";
     } else {
       warningText = "You are offline, loading events from local storage."
