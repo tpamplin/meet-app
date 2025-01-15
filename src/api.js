@@ -42,6 +42,11 @@ export const getEvents = async () => {
         return mockData;
     }
 
+    if (!navigator.online) {
+        const events = localStorage.getItem("lastEvents");
+        return events ? JSON.parse(events) : [];
+    }
+
     const token = await getAccessToken();
 
     if (token) {
@@ -49,8 +54,9 @@ export const getEvents = async () => {
         const getEventsUrl = "https://mo0ypn4rkf.execute-api.us-east-2.amazonaws.com/dev/api/get-events" + "/" + token;
         const response = await fetch(getEventsUrl);
         const result = await response.json();
-        NProgress.done();
         if (result) {
+            NProgress.done();
+            localStorage.setItem("lastEvents", JSON.stringify(result.events));
             return result.events;
         } else return null;
     }
