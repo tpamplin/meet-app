@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import NumberOfEvents from './components/NumberOfEvents'
 import CitySearch from './components/CitySearch';
 import EventList from './components/EventList';
-import { InfoAlert, ErrorAlert } from './components/Alert';
+import { InfoAlert, ErrorAlert , WarningAlert} from './components/Alert';
 import { extractLocations, getEvents } from "./api";
 import './App.css'
 
@@ -15,6 +15,7 @@ const App = () => {
   const [currentCity, setCurrentCity] = useState("See all cities"); // The city that you are currently viewing events for. (all by default)
   const [infoAlert, setInfoAlert] = useState(""); // Stores the text used in the Info Alert.
   const [errorAlert, setErrorAlert] = useState(""); // Stores the text used in the Error Alert
+  const [warningAlert, setWarningAlert] = useState(""); // Stores the text used in Warning Alert
 
   //Retrieve data, and set all states accordingly.
   const fetchData = async () => { 
@@ -28,6 +29,11 @@ const App = () => {
 
   // Initialize our state.
   useEffect(() => {
+    if(navigator.online) {
+      setWarningAlert("")
+    } else {
+      setWarningAlert("You are offline, showing events from local storage.")
+    }
     fetchData();
   }, [currentCity, currentNOE]);
   
@@ -37,6 +43,7 @@ const App = () => {
       <div className='alerts-container'>
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
+        {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
       </div>
       <CitySearch 
         allLocations={allLocations} 
