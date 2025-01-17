@@ -100,3 +100,7 @@ input[type="number"] {
   text-align: center;
   flex-direction:column;
 }
+
+.charts-container{
+  display: flex;
+}
