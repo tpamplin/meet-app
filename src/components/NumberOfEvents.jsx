@@ -22,7 +22,7 @@ const NumberOfEvents = ({currentNOE, setCurrentNOE, setErrorAlert}) => {
 
     return (
         <div id='number-of-events'>
-            <label>Number of Events:</label>
+            <label>Number of events: </label>
             <input type="text" value={number} onChange={handleInputChanged} />
         </div>
     );

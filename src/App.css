@@ -31,7 +31,7 @@ input[type="number"] {
 }
 
 .city {
-  width: 250px;
+  width: 90%;
 }
 
 #city-search {
@@ -93,4 +93,10 @@ input[type="number"] {
   left: 20px;
   width: 250px;
   z-index: 1000;
+}
+
+#number-of-events {
+  display: flex;
+  text-align: center;
+  flex-direction:column;
 }
