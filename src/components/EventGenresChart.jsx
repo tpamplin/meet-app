@@ -26,23 +26,24 @@ const EventGenresChart = ({ events }) => {
         return data;
       };
 
-        const renderCustomizedLabel = ({ cx, cy, midAngle, outerRadius, percent, index }) => {
-            const RADIAN = Math.PI / 180;
-            const radius = outerRadius;
-            const x = cx + radius * Math.cos(-midAngle * RADIAN) * 1.07;
-            const y = cy + radius * Math.sin(-midAngle * RADIAN) * 1.07;
-            return percent ? (
-            <text
-                x={x}
+
+    const renderCustomizedLabel = ({cx, cy, midAngle, outerRadius, percent, index }) => {
+        const RADIAN = Math.PI / 180;
+        const radius = outerRadius;
+        const x = cx + radius * Math.cos(-midAngle * RADIAN) * 1.07
+        const y = cy + radius * Math.sin(-midAngle * RADIAN) * 1.07
+        return percent ? (
+            <text 
+                x={x} 
                 y={y}
                 fill="#000000"
-                textAnchor={x > cx ? 'start' : 'end'}
+                textAnchor = {x > cx ? "start" : "end"}
                 dominantBaseline="central"
             >
-                {`${genres[index]} ${(percent * 100).toFixed(0)}%`}
+                {`${genres[index]} ${(percent*100).toFixed(0)}%`}
             </text>
-            ) : null;
-        };
+        ) : null;
+    };
 
     return(
         <ResponsiveContainer width="99%" height={400}>
