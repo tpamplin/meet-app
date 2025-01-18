@@ -49,7 +49,7 @@ const App = () => {
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
         {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
       </div>
-      <h1>Meet Up!</h1>
+      <h1 id="page-title">Meet Up!</h1>
       <CitySearch 
         allLocations={allLocations} 
         setCurrentCity={setCurrentCity}
