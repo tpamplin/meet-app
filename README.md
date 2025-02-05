@@ -53,13 +53,19 @@ Using the google calendar API to load a list of events and then display them to 
     git clone https://github.com/tpamplin/meet-app.git
     ```
 
-2. Install dependencies:
+2. Navigate to the project directory:
+
+    ```bash
+    cd meet-app
+    ```
+
+3. Install dependencies:
 
     ```bash
     npm install
     ```
 
-3. Start the server:
+4. Start the server:
 
     ```bash
     npm start
